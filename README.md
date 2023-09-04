@@ -9,6 +9,16 @@ Our inspiration for creating "StreamWise" stemmed from the desire to provide stu
 
 "StreamWise" is a full-stack web application that empowers users to make well-informed decisions about their education and career choices. It begins by collecting basic user details and then guides them through a personality test consisting of 30 thoughtfully designed questions. Leveraging OpenAI's ChatGPT and the BM25 model, our system processes this information to provide personalized course recommendations for undergraduate programs. Additionally, it recommends suitable streams for students after completing the 10th grade, all based on their personalities, interests, and hobbies. Users can also inquire about specific details, such as entrance exams, through our integrated chatbot.
 
+## Step-by-Step Code Execution Instructions:
+
+- Clone the repository.
+- Open the terminal
+- Run the command " pip install -r requirements.txt"
+- Run the command "python manage.py makemigrations"
+- Run the command "python manage.py migrate"
+- Run the command "python manage.py runserver"
+- The server would have been started at your local host.
+
 ## How I built it
 
 We built "StreamWise" using Django as our web development framework. The personality test is a central component, and it's carefully designed to extract valuable insights about the user. OpenAI's ChatGPT is employed to summarize the user's input and facilitate course recommendations. The BM25 model enhances our recommendation engine, ensuring that the suggested undergraduate programs align with the user's profile. We also integrated an OpenAI API-powered chatbot to provide instant answers to user queries.
