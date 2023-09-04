@@ -1,0 +1,157 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n static admin_datta %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .feature-details {
+            max-width: 55%;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Key Features</h1>
+    </header>
+
+    <div class="feature">
+        <img src="{% static 'assets/images/det.png' %}" alt="Feature 1" style="width: 300px; height: 300px;">
+        <div class="feature-details">
+          <h2>Detected Tumor Image</h2>
+          <p>Our tool employs YOLOv5, a state-of-the-art object detection model, to precisely locate and highlight tumors in MRI scans. This facilitates accurate diagnosis and treatment planning.</p>
+          <p>The model is trained on a diverse dataset of medical images and achieves exceptional performance in identifying tumors of various sizes and shapes. It plays a vital role in early detection and intervention.</p>
+          <p>Model Accuracy: >95%</p>
+      </div>
+    </div>
+
+    <div class="feature">
+        <img src="{% static 'assets/images/segm.jpg' %}" alt="Feature 2" style="width: 300px; height: 300px;">
+        <div class="feature-details">
+          <h2>Brain Tumor Segmentation</h2>
+          <p>Using a cutting-edge UNET3D model, our tool accurately segments brain tumors from MRI scans, providing healthcare professionals with detailed insights into tumor boundaries and locations.</p>
+          <p>The UNET3D model is trained on a diverse set of annotated medical images, allowing it to perform precise and efficient segmentation. This aids in treatment planning and monitoring tumor progression.</p>
+          <p>Model Accuracy: >90%</p>
+      </div>
+    </div>
+
+    <div class="feature">
+        <img src="{% static 'assets/images/prediction.jpeg' %}" alt="Feature 3"  style="width: 300px; height: 300px;">
+        <div class="feature-details">
+          <h2>Tumor Classification</h2>
+          <p>Our advanced CNN model performs accurate tumor classification based on MRI scan images. It classifies tumors into different categories, aiding medical professionals in understanding tumor types.</p>
+          <p>The CNN model is trained on a curated dataset of labeled tumor images, enabling it to differentiate between various tumor types with a high degree of accuracy.</p>
+          <p>Model Accuracy: >98%</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="{% static 'assets/images/volume.png' %}" alt="Feature 4"  style="width: 300px; height: 300px;">
+      <div class="feature-details">
+        <h2>Tumor Volume Calculation</h2>
+        <p>Our tool calculates the volume of segmented tumors using advanced 3D image processing techniques. This crucial metric assists medical professionals in assessing tumor growth and planning interventions.</p>
+        <p>By leveraging a sophisticated UNET3D model, we accurately segment tumors and calculate their volumes, contributing to precise treatment decisions and patient care.</p>
+        <p>Model Accuracy: >90%</p>
+    </div>
+    </div>
+
+    <div class="feature">
+        <img src="{% static 'assets/images/area.jpeg' %}" alt="Feature 5" style="width: 300px; height: 300px;">
+        <div class="feature-details">
+          <h2>Tumor Area Measurement</h2>
+          <p>Our tool provides precise measurements of tumor areas from segmented MRI scans. Accurate area assessment assists healthcare professionals in monitoring tumor progression and treatment effectiveness.</p>
+          <p>The UNET3D model accurately segments tumors and calculates their areas, enabling clinicians to make informed decisions about patient care and treatment plans.</p>
+          <p>Model Accuracy: >90%</p>
+      </div>
+    </div>
+
+    <div class="feature">
+        <img src="{% static 'assets/images/stages.png' %}" alt="Feature 6" style="width: 300px; height: 300px;">
+        <div class="feature-details">
+          <h2>Tumor Stage Prediction</h2>
+          <p>Our tool predicts the stage of the tumor based on its size. Depending on the tumor's area, it is classified into different stages, helping healthcare professionals determine the appropriate treatment strategy.</p>
+          <p>* If the tumor area is between 0 to 7 mm then it is
+            First stage.
+            <br>
+            * If the tumor is between 7 to 14 mm then the tumor
+            is at second stage.
+            <br>
+            * If the tumor is between 14 to 21 mm then the tumor
+            is at third stage.
+            <br>
+            * If the tumor is 21 and above then the tumor is in
+            critical stage.
+            <br>
+            In this way proper size and stage is detected and it helps to
+            doctor to provide a proper treatment or medicines as per
+            patient situation.</p>
+          
+      </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Medical Imaging Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n static admin_datta %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Misleading Channels</title>
+    <!-- Add your CSS and Bootstrap CDN links here -->
+    <style>
+        /* Your CSS styles here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Misleading Channels</h2>
+        <button id="showTableBtn">Get Misleading Channels</button>
+        <table id="misleadingTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Video URL</th>
+                    <th>Channel Name</th>
+                    <th>Conclusion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in misleading_results %}
+                <tr>
+                    <td>{{ result.video_url }}</td>
+                    <td>{{ result.channel_name }}</td>
+                    <td>{{ result.conclusion }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById('showTableBtn').addEventListener('click', function() {
+            var table = document.getElementById('misleadingTable');
+            if (table.style.display === 'none') {
+                table.style.display = 'table';
+            } else {
+                table.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+{% endblock content %}
