@@ -1,5 +1,7 @@
 # StreamWise
-Welcome to Streamwise, your trusted companion in shaping your educational and career journey
+Welcome to Streamwise, your trusted companion in shaping your educational and career journey. Streamwise is an innovative AI-based guidance system designed for students who are on the cusp of important academic decisions after completing their 10th and 12th grades.
+
+At Streamwise, we understand that choosing the right path for your education and career can be a daunting task. That's why we're here to simplify the process and empower you to make informed choices that align with your unique interests, passions, and aspirations.
 
 ## Inspiration
 
@@ -7,7 +9,7 @@ Our inspiration for creating "StreamWise" stemmed from the desire to provide stu
 
 ## What it does
 
-"StreamWise" is a full-stack web application that empowers users to make well-informed decisions about their education and career choices. It begins by collecting basic user details and then guides them through a personality test consisting of 30 thoughtfully designed questions. Leveraging OpenAI's ChatGPT and the BM25 model, our system processes this information to provide personalized course recommendations for undergraduate programs. Additionally, it recommends suitable streams for students after completing the 10th grade, all based on their personalities, interests, and hobbies. Users can also inquire about specific details, such as entrance exams, through our integrated chatbot.
+"StreamWise" is a full-stack web application that empowers users to make well-informed decisions about their education and career choices. It begins by collecting basic user details and then guides them through a personality test consisting of 30 thoughtfully designed questions. Leveraging OpenAI's ChatGPT and the BM25 model, our system processes this information to provide personalized course recommendations for undergraduate programs. Additionally, it recommends suitable streams for students after completing the 10th grade, all based on their personalities, interests, and hobbies.
 
 ## Step-by-Step Code Execution Instructions:
 
@@ -21,7 +23,7 @@ Our inspiration for creating "StreamWise" stemmed from the desire to provide stu
 
 ## How I built it
 
-We built "StreamWise" using Django as our web development framework. The personality test is a central component, and it's carefully designed to extract valuable insights about the user. OpenAI's ChatGPT is employed to summarize the user's input and facilitate course recommendations. The BM25 model enhances our recommendation engine, ensuring that the suggested undergraduate programs align with the user's profile. We also integrated an OpenAI API-powered chatbot to provide instant answers to user queries.
+We built "StreamWise" using Django as our web development framework. The personality test is a central component, and it's carefully designed to extract valuable insights about the user. OpenAI's ChatGPT is employed to summarize the user's input and facilitate course recommendations. The BM25 model enhances our recommendation engine, ensuring that the suggested undergraduate programs align with the user's profile. 
 
 ## Challenges I ran into
 
